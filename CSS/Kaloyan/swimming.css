@@ -177,7 +177,7 @@ nav ul li a:hover::after {
   padding-left: 5%;
   font-size: 18px;
   text-align: left;
-  text-indent: 5%;
+  text-indent: 10%;
   font-family: sans-serif;
   font-family: "Open Sans", sans-serif;
 }
