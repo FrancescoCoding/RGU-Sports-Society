@@ -1,0 +1,178 @@
+/* Kevin Jose */
+
+:root {
+  --primary-color: #62056b;
+  --primary-dark: #56035e;
+  --primary-darker: #490150;
+  --secondary-color: #2f8fa5;
+  --tan-color: #f2d0a4;
+  --light-grey: #f6f6f6;
+}
+
+body {
+ font-family: "Open Sans", sans-serif;
+}
+
+/* Team info cards */
+.row {
+box-sizing: border-box;
+}
+
+.team {
+  padding: 0 16px;
+}
+
+.column {
+  float:left;
+  width: 30%;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.card {
+  box-shadow: 1px 5px;
+border: 1px solid ;
+}
+
+/* Login form */
+div.login {
+ margin-top: 10px;
+ margin-bottom: 100px;
+ padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+border:none;
+ box-sizing: border-box;
+background-color: f6f6f6;
+border-radius: 25px;
+ box-shadow: 1px 5px 5px 5px;
+height: 350px;
+display: inline-block;
+ line-height: 30px;
+}
+
+/* Login button */
+.logbtn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  background: #56035e;;
+  color: #f6f6f6;
+}
+.logbtn:hover {
+  background: var(--primary-color);
+}
+.logbtn:active {
+  background: var(--primary-color);
+}
+
+
+/* Register button */
+.rgbtn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  background: #56035e;
+  color: #f6f6f6;
+ width: 90%;
+}
+
+
+/* Forgot password */
+
+.psw {
+color: --primary-color;
+}
+
+
+
+/* Activities paragraphs */
+
+.para {
+box-sizing: border-box;
+float:left;
+  margin-bottom: 16px;
+  padding: 0 8px;
+background-color: f6f6f6;
+border-style: outset;
+border: 1px solid ;
+box-shadow: 5px 1px ;
+}
+
+
+footer>p {
+width 150px;
+marginleft : auto;
+marginright : auto;
+color: white;
+background-color: black;
+text-align: center;
+}
+
+
+/* NAVIGATION BAR */
+.navbar {
+  z-index: 9001;
+  display: flex;
+  width: 100%;
+  /* Navbar color */
+  background: var(--primary-color) no-repeat center center/cover;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s ease-in;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  transition: 0.2s ease-in;
+}
+
+.navbar ul {
+  display: flex;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav {
+  display: flex;
+  padding: 0px 3rem;
+  width: 100%;
+  justify-content: flex-end;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  cursor: pointer;
+  padding: 18px 30px;
+  font-size: 1.07rem;
+  font-weight: 200;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 0.4rem;
+  transition: width 0.2s;
+}
+nav ul li a:hover::after {
+  content: "";
+  display: block;
+  width: 105%;
+  height: 3px;
+  background: var(--secondary-color);
+}

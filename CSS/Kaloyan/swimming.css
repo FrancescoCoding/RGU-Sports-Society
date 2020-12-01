@@ -1,0 +1,248 @@
+/* Kaloyan Asenov */
+
+/* UTILITIES */
+/* Color variables */
+:root {
+  --primary-color: #62056b;
+  --primary-dark: #56035e;
+  --primary-darker: #490150;
+  --secondary-color: #2f8fa5;
+  --tan-color: #f2d0a4;
+  --light-grey: #f6f6f6;
+}
+
+/* Reset of margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  background: var(--light-grey);
+  height: 100vh;
+}
+
+/* Normal pages background */
+section {
+  background-color: var(--light-grey);
+}
+
+.wrapper {
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  max-width: 1600px;
+  background: #fff;
+  height: 100%;
+  padding: 1rem 2.5rem 4rem;
+  color: #333;
+  margin-top: 130px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn:hover {
+  background: var(--primary-dark);
+}
+.btn:active {
+  background: var(--primary-darker);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  z-index: 9001;
+  display: flex;
+  width: 100%;
+  /* Navbar color */
+  background: url("https://files.catbox.moe/3jsdr1.svg") no-repeat center
+    center/cover;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s ease-in;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav {
+  display: flex;
+  padding: 0px 3rem;
+  width: 100%;
+  justify-content: flex-end;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  cursor: pointer;
+  padding: 18px 30px;
+  font-size: 1.07rem;
+  font-weight: 200;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 0.4rem;
+  transition: width 0.2s;
+}
+nav ul li a:hover::after {
+  content: "";
+  display: block;
+  width: 105%;
+  height: 3px;
+  background: var(--secondary-color);
+}
+
+/* MEMBERSHIP PAGE */
+.membership-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 2.2rem;
+}
+.membership-bottom {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.membership-bottom .box {
+  display: flex;
+}
+
+#image-2 {
+  transform: translate(-1.4rem, 2.2rem);
+}
+#image-3 {
+  transform: translateY(2.6rem);
+}
+
+/*start of swimming soc styling*/
+.leftSide {
+  background-color: white;
+  margin-top: 10%;
+  width: 70%;
+  float: left;
+  display: inline-block;
+}
+.bio {
+  margin-top: 3%;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mainText1 {
+  padding-top: 7%;
+  padding-left: 5%;
+  font-size: 18px;
+  text-align: left;
+  text-indent: 10%;
+  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.mainText2 {
+  padding-left: 5%;
+  font-size: 18px;
+  text-align: left;
+  text-indent: 5%;
+  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.closing {
+  font-size: 18px;
+  text-align: center;
+  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 5%;
+}
+/*right side styling*/
+.rightSide {
+  display: inline-block;
+  background-color: white;
+  margin-top: 10%;
+  float: right;
+  text-align: center;
+}
+
+.textRight {
+  margin: 3% 0;
+  text-align: center;
+  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+/* links */
+h4.email a {
+  text-align: center;
+  padding-top: 5%;
+  color: black;
+}
+
+h4.ig a {
+  text-align: center;
+  padding-top: 8%;
+  color: black !important;
+}
+
+iframe {
+  margin-left: 5%;
+}
+
+.logo {
+  display: flex;
+  z-index: 9999;
+  top: 20px;
+  left: 40px;
+  position: fixed;
+}
+
+.title {
+  z-index: 9002;
+  top: 25px;
+  left: 145px;
+  font-size: 1.1rem;
+  font-weight: 100;
+  position: fixed;
+  letter-spacing: 0.1rem;
+}
+
+.facilities-title {
+  padding: 1rem;
+}
+
+#events-content {
+  margin-top: 150px;
+}

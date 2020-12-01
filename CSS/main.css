@@ -1,0 +1,399 @@
+/* Francesco Gruosso */
+
+/* UTILITIES */
+/* Reusable colour variables */
+:root {
+  --primary-color: #62056b;
+  --primary-dark: #56035e;
+  --primary-darker: #490150;
+  --secondary-color: #2f8fa5;
+  --tan-color: #f2d0a4;
+  --light-grey: #d6d5d5;
+}
+
+/* Reset of margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  background: rgb(0, 0, 0);
+  height: 200vh;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Section background */
+section {
+  background-color: var(--light-grey);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Page formatting */
+.wrapper {
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  max-width: 1600px;
+  background: #fff;
+  height: 100%;
+  padding: 1rem 2.5rem 4rem;
+  color: #333;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 45px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn:hover {
+  background: var(--primary-dark);
+}
+.btn:active {
+  background: var(--primary-darker);
+}
+
+/* Boxes */
+.box {
+  height: 500px;
+  width: 340px;
+  background: #e8e8e8;
+  border-top: 0.5rem solid #92558a;
+  transition: all 0.2s;
+}
+.box:hover {
+  cursor: pointer;
+  box-shadow: 0 7px 20px -10px rgba(150, 170, 180, 0.5);
+}
+.box:hover .subsection .price {
+  background: rgb(196, 196, 196);
+  transition: all 0.2s;
+}
+.box:active .subsection .price {
+  background: rgb(157, 157, 157);
+  box-shadow: 0 7px 20px -10px rgba(115, 127, 133, 0.5);
+  transition: all 0.2s;
+}
+
+/* Showcase */
+#main-showcase {
+  background: var(--light-grey);
+  width: 100%;
+  padding: 2.4rem 0 3rem;
+}
+.main-wrapper {
+  padding: 3rem 0;
+  background: var(--secondary-color);
+  max-width: 100%;
+}
+.main-wrapper-content {
+  max-width: 1200px;
+  margin: auto;
+}
+.main-wrapper-content h1 {
+  font-size: 2.2rem;
+  color: rgb(255, 255, 255);
+  padding-bottom: 1rem;
+  padding-top: 0.4rem;
+}
+.main-wrapper-content h3 {
+  margin: 1.5rem 0;
+}
+.main-wrapper-content p {
+  padding-top: 0.5rem;
+  transition: all 0.2s ease;
+}
+.main-wrapper-content .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 3.4rem;
+}
+.main-wrapper-content .icons .item {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.main-wrapper-content .icons .item a {
+  transition: all 0.2s ease;
+  color: rgba(237, 237, 237, 0.927);
+  border: 3px solid transparent;
+}
+.main-wrapper-content .icons .item a:hover {
+  cursor: pointer;
+  color: #fff;
+  transform: scale(1.2);
+}
+/* Target the sibling <p> of the icon */
+.main-wrapper-content .icons .item a:hover + p {
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.1s ease;
+  transform: scale(1.1);
+  transform: translate(16px, 5px);
+}
+.main-wrapper-content .icons .item a:active {
+  transition: all 0.1s ease;
+  transform: scale(1.5);
+}
+
+/* HOME PAGE */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  height: 100vh;
+}
+
+/* Home page content */
+.header-content h1 {
+  transform: translate(-12rem, -4rem);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4.8rem;
+  text-align: end;
+}
+.header-content .btn {
+  transform: translate(-3.5rem, -4rem);
+  font-size: 1.3rem;
+  box-shadow: inset 0 4px 0 hsl(225, 84%, 74%);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+/* Logo */
+.logo.hidden {
+  display: none;
+}
+.logo {
+  display: flex;
+  z-index: 9002;
+  top: 20px;
+  left: 40px;
+  position: fixed;
+}
+
+/* Title next to the logo */
+.title.hidden {
+  display: none;
+}
+.title {
+  z-index: 9002;
+  top: 25px;
+  left: 145px;
+  font-size: 1.1rem;
+  font-weight: 100;
+  position: fixed;
+  letter-spacing: 0.1rem;
+}
+
+/* Overlayes the background image to the header */
+header::after {
+  content: "";
+  background: url("https://source.unsplash.com/uNQ-TTg_qNY/1600x900") no-repeat
+    center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 90%;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+  z-index: 9001;
+  display: flex;
+  width: 100%;
+  /* Navbar color */
+  background: url("https://files.catbox.moe/3jsdr1.svg") no-repeat center
+    center/cover;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  transition: 0.3s ease-in;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  transition: 0.2s ease-in;
+}
+.navbar.hidden {
+  background: transparent;
+  transition: all 0.3s;
+}
+.navbar ul {
+  display: flex;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav {
+  display: flex;
+  padding: 0px 3rem;
+  width: 100%;
+  justify-content: flex-end;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  cursor: pointer;
+  padding: 18px 30px;
+  font-size: 1.07rem;
+  font-weight: 200;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 0.4rem;
+  transition: width 0.2s;
+}
+nav ul li a:hover::after {
+  content: "";
+  display: block;
+  width: 105%;
+  height: 3px;
+  background: var(--secondary-color);
+}
+
+/* MEMBERSHIP PAGE */
+/* Illustrations */
+.membership-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 2.2rem;
+}
+/* Membership boxes */
+.membership-bottom {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.membership-bottom .box {
+  display: flex;
+}
+
+.membership-title {
+  padding: 2rem;
+}
+
+#image-2 {
+  transform: translate(-1.4rem, 2.2rem);
+}
+#image-3 {
+  transform: translateY(2.6rem);
+}
+
+/* Card icons */
+.box i {
+  color: #35ab5d;
+  font-size: 1.6rem;
+}
+.box i.disabled {
+  color: #939393;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Card subsection */
+.box .subsection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.box .subsection h3 {
+  width: 100%;
+  padding: 1.5rem 1rem 2rem;
+  text-align: left;
+}
+
+/* Price */
+.box .subsection .price {
+  width: 100%;
+  background: #cacaca;
+  padding: 1.8rem 1rem;
+  transition: all 0.3s;
+}
+.box.active .price {
+  background: rgba(114, 34, 114, 0.926);
+  color: rgb(220, 220, 220);
+}
+.box.active:hover .price {
+  background: rgba(133, 31, 133, 0.926);
+  color: rgb(232, 232, 232);
+}
+
+.box .subsection .price .price-content {
+  display: flex;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: 100;
+}
+.box .subsection .price .price-content h2 {
+  font-weight: 500;
+}
+/* Per month span*/
+.box .subsection .price .price-content span {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+/* Deals section */
+.deals span {
+  font-weight: 800;
+}
+.deals ul {
+  padding: 1.4rem 0;
+}
+.deals ul li {
+  padding: 0.3rem 0;
+}
+/* If the li contains .disabled, grey it out */
+.deals ul li[class*="disabled"] {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+}
+
+.selected.hidden {
+  display: none;
+}
+
+#next {
+  float: right;
+  margin-top: 3rem;
+  margin-right: 5rem;
+  padding: 1.3rem 2.2rem;
+}

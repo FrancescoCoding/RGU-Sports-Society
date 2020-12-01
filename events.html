@@ -1,0 +1,202 @@
+<!-- Ross Davidson -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Sans font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Tab icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://de.catbox.moe/or3ctq.ico">
+
+  <!-- Link to the style sheets -->
+  <link rel="stylesheet" href="CSS/Ross/Ross.css">
+
+  <!-- Title -->
+  <title>RGU | Events</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <a href="index.html" class="logo "><img src="Images/RGU_Logo.svg" alt=""></div>
+  <div class="title ""><h1>EVENTS</h1></div>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></i>
+          <li><a href="#gallery">Gallery</a></i>
+          <li><a target="_blank" href="members_and_activities.html">Members</a></i>
+          <li><a href="index.html">Extra</i></a></li>
+        </ul>
+      </nav>
+    </div>
+
+  <div class="wrapper" id="events-content">
+    <div class="facilities-title">
+      <h2>Events Calendar</h2>
+    </div>
+
+  
+  <section id="calendarsection">
+  
+    <section id="monthtitle">
+    <p id="monthtext">November<br><b>2020<b></p>
+  </section>
+  
+  <section id="tableheaders">
+    <table>
+      <tr>
+        <th class="monthlist">Mo</th>
+        <th class="monthlist">Tu</th>
+        <th class="monthlist">We</th>
+        <th class="monthlist">Th</th>
+        <th class="monthlist">Fr</th>
+        <th class="monthlist">Sa</th>
+        <th class="monthlist">Su</th>
+      </tr>
+    </table>
+  </section>
+  
+  <section id="tabledays">
+    <table>
+      <tr>
+        <th class="dayslist">1</th>
+        <th class="dayslist">2</th>
+        <th class="dayslist">3</th>
+        <th class="dayslist">4</th>
+        <th class="dayslist">5</th>
+        <th class="dayslist">6</th>
+        <th class="dayslist">7</th>
+      </tr>
+      <tr>
+        <th class="dayslist">8</th>
+        <th class="dayslist">9</th>
+        <th class="dayslist">10</th>
+        <th class="dayslist">11</th>
+        <th class="dayslist">12</th>
+        <th class="dayslist">13</th>
+        <th class="dayslist">14</th>
+      </tr>
+      <tr>
+        <th class="dayslist">15</th>
+        <th class="dayslist">16</th>
+        <th class="dayslist">17</th>
+        <th class="dayslist">18</th>
+        <th class="dayslist">19</th>
+        <th class="dayslist">20</th>
+        <th class="dayslist">21</th>
+      </tr>
+      <tr>
+        <th class="dayslist">22</th>
+        <th class="dayslist">23</th>
+        <th class="dayslist">24</th>
+        <th class="dayslist">25</th>
+        <th class="dayslist">26</th>
+        <th class="dayslist">27</th>
+        <th class="dayslist">28</th>
+      </tr>
+      <tr>
+        <th class="dayslist">29</th>
+        <th class="dayslist">30</th>
+        <th class="dayslist">31</th>
+      </tr>
+    </table>
+  </section>
+    
+  
+  <div id="thisweek">This Week:	</div>
+  
+  <div class="informationofdays">
+    <b>MON: </b>Boxing Club <b>| LOCATION: </b>RGU Gym <b>| TIME: </b>18:00
+  </div>
+  
+  <div class="informationofdays" style="background-color:#712177;color:white">
+    <b>TUE: </b>Football Club <b>| LOCATION: </b>RGU Astroturf <b>| TIME: </b>20:00
+  </div>
+  
+  <div class="informationofdays">
+    <b>WED: </b>Climbing Club <b>| LOCATION: </b>Climbing Wall <b>| TIME: </b>16:00
+  </div>
+  
+  <div class="informationofdays" style="background-color:#712177;color:white">
+    <b>THU: </b>Swimming Club <b>| LOCATION: </b>Swimming Pool <b>| TIME: </b>20:00
+  </div>
+  
+  <div class="informationofdays">
+    <b>FRI: </b>Spin Class <b>| LOCATION: </b>RGU Gym <b>| TIME: </b>18:00
+  </div>
+
+  </section>
+    
+  <section id="image1">
+    <img src='Images/Ross/rgusport.jpg' height='140px' width='540px'/>
+  
+  </section>
+  
+  <section id="image2">
+    <img src='Images/Ross/football.jpg' height='140px' width='540px'/>
+  
+  </section>
+    
+  <section id="image3">
+    <img src='Images/Ross/badminton.jpg' height='140px' width='540px'/>
+  </section></h1>
+  </div>
+</section>
+  <!-- jQuery import -->
+  <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"
+  ></script>
+
+  <!-- Javascript - Francesco Gruosso-->
+  <script>
+
+    // Smooth Scrolling navigation bar
+    $('nav ul li a').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100,
+          },
+          800
+        );
+      }
+    });
+    // Smooth Scrolling home button
+    $('.btn').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100,
+          },
+          600
+        );
+      }
+    });
+
+    // Event listener for membership page boxes
+    // Iterating through the elements and adding an event to each one
+    Array.from(document.querySelectorAll(".box")).map((el) => {
+      el.addEventListener("click", (e) => {
+        let selected = el.firstElementChild.firstElementChild.firstElementChild;
+        selected.classList.toggle("hidden");
+        el.classList.toggle("active");
+      });
+    });
+
+  </script>
+</body>
+</html>
